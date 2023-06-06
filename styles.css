@@ -34,9 +34,13 @@
   font-weight: bold;
 }
 
+/* TODO: add some cool transitions to these or just floating around type beat */
 .botitem{
+  color: black;
   text-decoration: none;
 }
+
+
 /* CSS styles for the sections */
 section {
   margin-top: 0px; /* to push content below the fixed navbar */
@@ -153,6 +157,131 @@ background: radial-gradient(rgb(249, 249, 249), rgb(207, 237, 238));
   object-fit: cover;
 }
 
+.cards{
+  display: flex;
+  overflow: hidden;
+}
+.card {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 230px;
+  grid-template-rows: 170px 170px 50px;
+  grid-template-areas: "image" "text" "stats";
+  color: black;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-image {
+  grid-area: image;
+}
+.card-text {
+  grid-area: text;
+}
+.card-stats {
+  grid-area: stats; 
+}
+
+.card1-image {
+  grid-area: image;
+  background: url(".png");
+  background: radial-gradient(rgb(9, 4, 4) , rgb(227, 163, 14));
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card2-image {
+  grid-area: image;
+  background: url(".png");
+  background: radial-gradient(red , blue);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card3-image {
+  grid-area: image;
+  background: url(".png");
+  background: radial-gradient(rgb(157, 143, 143) , rgb(167, 165, 45));
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card4-image {
+  grid-area: image;
+  background: url(".png");
+  background: radial-gradient(rgb(9, 255, 0) , rgb(248, 34, 237));
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card5-image {
+  grid-area: image;
+  background: url(".png");
+  background: radial-gradient(rgb(67, 59, 59) , rgb(244, 244, 253));
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  font-family: monospace;
+  grid-area: text;
+  margin: 9px;
+}
+.card-text .date {
+  color: rgb(0, 0, 0);
+  font-size:13px;
+}
+.card-text p {
+  margin-top: -10px;
+  color: rgb(72, 72, 72);
+  font-size:15px;
+  font-weight: 300;
+}
+
+.card-text h2 {
+  margin-top: 4px;
+  font-size:17px;
+}
+.card-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(11, 10, 10);
+}
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: white;
+  padding:10px;
+}
+
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.card {
+
+  transition: 0.1s ease;
+  cursor: pointer;
+  margin:30px;
+}
+
+
 /* CSS styles for the circular image */
 .project-button{
   width: 120px;
@@ -184,10 +313,11 @@ background: radial-gradient(rgb(249, 249, 249), rgb(207, 237, 238));
 
 .soccer-img{
   
-  width: 75%;
-  height: 75%;
+  width: 70%;
+  height: 70%;
   border-radius: 00%;
   object-fit:contain;
+  margin-bottom: 50px;
 
 }
 .circle-img {
