@@ -98,9 +98,14 @@ background: radial-gradient(rgb(249, 249, 249), rgb(207, 237, 238));
 }
 .home-child{
   padding: 30px;
-
   vertical-align: middle;
   width: 50%;
+}
+
+.arrow{
+  margin-top: 70px;
+  float: right;
+  font-size: 30pt;
 }
 .langs p{
   padding-top: 70px;
@@ -158,14 +163,15 @@ background: radial-gradient(rgb(249, 249, 249), rgb(207, 237, 238));
 }
 
 .cards{
+  margin-top: 70px;
   display: flex;
   overflow: hidden;
 }
 .card {
   margin: 30px;
   display: grid;
-  grid-template-columns: 230px;
-  grid-template-rows: 170px 170px 50px;
+  grid-template-columns: 210px;
+  grid-template-rows: 210px 210px 50px;
   grid-template-areas: "image" "text" "stats";
   color: black;
   border-radius: 18px;
@@ -189,8 +195,7 @@ background: radial-gradient(rgb(249, 249, 249), rgb(207, 237, 238));
 
 .card1-image {
   grid-area: image;
-  background: url(".png");
-  background: radial-gradient(rgb(9, 4, 4) , rgb(227, 163, 14));
+  background: url("HC.jpg");
 
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -198,25 +203,22 @@ background: radial-gradient(rgb(249, 249, 249), rgb(207, 237, 238));
 }
 .card2-image {
   grid-area: image;
-  background: url(".png");
-  background: radial-gradient(red , blue);
+  background: url("CH.jpg");
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
 }
 .card3-image {
   grid-area: image;
-  background: url(".png");
-  background: radial-gradient(rgb(157, 143, 143) , rgb(167, 165, 45));
-
+  background: url("CA.jpg");
+  background-position: center;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
 }
 .card4-image {
   grid-area: image;
-  background: url(".png");
-  background: radial-gradient(rgb(9, 255, 0) , rgb(248, 34, 237));
+  background: url("EPL.png");
 
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -224,8 +226,7 @@ background: radial-gradient(rgb(249, 249, 249), rgb(207, 237, 238));
 }
 .card5-image {
   grid-area: image;
-  background: url(".png");
-  background: radial-gradient(rgb(67, 59, 59) , rgb(244, 244, 253));
+  background: url("SS.png");
 
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
