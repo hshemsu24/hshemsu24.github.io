@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Agglomerative Hierarchical Clustering</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="clustering.js" defer></script>
+  </head>
+  <body>
+    <div id="root">
+      <h1 class="head">Agglomerative Hierarchical Clustering</h1>
+      <div id="intro">
+        <h3>What is hierarchical clustering?</h3>
+        <p>
+          Hierarchical clustering is a popular method for grouping objects into
+          groups called clusters. It has applications in machine learning, data
+          analysis, and computational biology.
+        </p>
+        <p id="disclaimer">
+          To learn more about agglomerative hierarchical clustering and the
+          technical development of this interaction, click
+          <a href="techdev.html">here</a>.
+        </p>
+        <h3>Instructions:</h3>
+        <p>
+          To begin, either click on the white canvas to draw points manually or
+          click on "Add 5 Random Points" to populate the canvas. Then click on
+          the "Initialize" button. You can then choose to step through the
+          algorithm or animate it entirely.
+        </p>
+      </div>
+      <div id="cluster-containter">
+        <svg id="cluster" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div id="control-box">
+          <button id="btn-initialize">Initialize</button>
+          <button id="btn-update-clusters">Step Algorithm</button>
+          <button id="btn-animate">Animate Algorithm</button>
+          <button id="btn-add-cluster">Add 5 Random Points</button>
+          <button id="btn-restart">Reset</button>
+          <div id="brk"></div>
+            <label for="spd">Animation Speed</label>
+            <input type="range" id="spd" min="0.8" max="3" step=".2" >          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Development: Agglomerative Hierarchical Clustering</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <div id="root2">
+      <h1 class="head">
+        Hierarchical Clustering: Background and Implementation
+      </h1>
+      <div id="intro">
+        <p></p>
+        <p><a href="index.html">Back to home page</a></p>
+        <p id="disclaimer">
+          This project was inspired by and adapted from Professor Rosenbaum's
+          demonstration of k-means clustering.
+        </p>
+        <h2>Background and Motivation</h2>
+        <p>
+          Agglomerative Hierarchical Clustering (AHC) is the process of grouping
+          data points on the basis of similarity.
+          <a href="https://en.wikipedia.org/wiki/Hierarchical_clustering"
+            >Hierarchical clustering</a
+          >
+          is a brand of clustering with the goal of building a hierarchy of
+          clusters, this hierarchy is often represented by a dendrogram that
+          shows how similar two points or clusters are based on how tall the
+          lines connecting them are. There are two types of hierarchical
+          clustering, agglomerative, where every point starts as its own cluster
+          and clusters, and divisive, where all points are in the same cluster
+          to begin.
+        </p>
+        <p>
+          This project focuses on AHC, in which the singleton clusters are
+          merged based on similarity until there is one cluster left. In our
+          project joining of clusters is visualized by points becoming the same
+          color and lines linking them. Another common visualization of AHC is a
+          dendrogram, a type of tree that shows merges of clusters.
+        </p>
+        <div id="gif">
+          <img src="https://miro.medium.com/max/480/0*BfO2YN_BSxThfUoo.gif" alt="Diagram to demonstrate AH Algorithm" />
+          <p>
+            gif credit:
+            https://www.kdnuggets.com/2019/09/hierarchical-clustering.html
+          </p>
+        </div>
+        <p>
+          AHC has applications in computation biology, statistics, and data
+          analysis. For some interesting applications, check out
+          <a href="https://en.wikipedia.org/wiki/Hierarchical_clustering"
+            >this</a
+          >
+          article in Towards Data Science.
+        </p>
+        <h2>Our Visual Implementation</h2>
+        <p>
+          Our site is implemented in Javascript, HTML, and CSS. We use two main
+          classes, agCluster and agVisualizer to run our backend and dynamic
+          visualization. agCluster represents an instance of a clustering
+          problem. When the user adds points to the screen, they are added to
+          this instance. agCluster then has methods that calculates the distance
+          matrix of all these points, and merge clusters. agVisualizer connects
+          the front end display to this algorithmic component, calling functions
+          within agCluster to run the visual. For example, when the user clicks
+          “Step Algorithm” a function animateStep within agVisualizer is called
+          that calls three functions within agCluster: finds the two points with
+          the minimum distance, checks that these two points are not already
+          clustered together, and then merges them. In addition, it manipulates
+          the SVG elements to reflect the step of merging. When the user chooses
+          “Animate Algorithm” this function is called in a loop until one
+          cluster remains.
+        </p>
+        <h2>Algorithm and Challenges</h2>
+        <br />
+        <h3>Algorithm Breakdown</h3>
+        <p>Steps to peform Agglomerative Hierarchical Clustering:</p>
+
+        <p>
+          1. Treat every point as its own cluster. <br />
+          2. Compute the distance between every pair of points and assemble a
+          distance matrix using Euclidean distance. <br />
+          3. Using the distance matrix, iterate through the matrix to find the
+          minimum distance between 2 objects <br />
+          4. If these points are not already in the same cluster, combine the
+          corresponding objects of the minimum distance into one cluster. <br />
+          5. Repeat steps 3-4 until only one cluster is left.
+        </p>
+        <p>
+          An algorithmic challenge we encountered was determining which clusters
+          should be merged. There are a few different options for how to decide
+          merges in AHC, and we chose to use the minimum distance between two
+          points. To implement finding minimum distances, we used a distance
+          matrix. Since the points do not move during execution of the
+          algorithm, we knew that the distances between each pair of points
+          would not change, so we only calculate the distance matrix once. After
+          that, we refer to it to find the closest distance between two points.
+          The challenge here is that once the smallest distance has been found
+          in the matrix, the corresponding points and their distance should no
+          longer be considered as the reason for a merge. But keeping track of
+          the order of smallest values we were finding was complicated, so we
+          found a different strategy. Since these closest points merge into one
+          cluster we decided to “cross off” that distance in the matrix by
+          setting it to positive infinity. This ensures that these two points
+          won't register as having the smallest distance between them, because
+          they have already merged into one cluster.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
