@@ -1,0 +1,39 @@
+.back {    
+    
+    margin: 0 auto;
+    width: 600px;
+    height: 80px;
+    background-color:gold;
+    
+}
+
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px; 
+
+}
+
+html{
+    background-color:black;
+    background: radial-gradient(rgb(48, 85, 96) 50%, rgb(3, 3, 1));
+}
+
+
+.row{
+    height: 2px;
+}
+.cell{
+    float: left;
+    width: 15px;
+    height: 15px;
+
+}
+.one{
+    background-color: black;
+}
+.zero{
+    background-color: white;
+}

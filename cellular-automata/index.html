@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Cellular Automata </title>
+        <link rel="stylesheet" href="style.css" >
+        <script src="cellular-automata.js"></script>
+        <script>
+            window.onload = function() {
+
+                //ask user to input a rule
+                var rule = prompt("Choose a number between 0 and 255");
+                
+                //if invalid input is entered
+                while(rule !== null && isNaN(rule) || rule<0 || rule>255){
+                    alert ("Invalid Input: Please enter a valid number between 0 and 255");
+                    var rule = prompt("Choose a number between 0 and 255");
+                }
+                
+                
+                rule = Math.floor(rule);
+
+                const width = 40;
+                const height = 100;
+                drawCell(rule, width, height);
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="back">
+            <div id="root"></div>
+        </div>
+
+        
+    </body>
+
+</html>
