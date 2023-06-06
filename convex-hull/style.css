@@ -1,0 +1,37 @@
+.bgcolor{
+    background: radial-gradient(rgb(0, 255, 238), rgb(222, 147, 225));
+    margin:auto; 
+}
+
+#root{
+text-align: center;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#convex-hull-box{
+    width: 600;
+    height: 400;
+    border: 1px solid black;
+
+}
+
+
+svg{
+    margin: auto;
+    position: relative;
+    display: block;
+    background-color: white !important;
+}
+
+button {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+button:hover {
+    background-color: pink;
+    font-family: inherit;
+}
+
+button:active {
+    background-color: aqua;
+}
