@@ -1,0 +1,271 @@
+/* styles.css */
+ /* CSS styles for the navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(251, 236, 201, 0.4); /* slightly transparent off-white */
+  z-index: 1;
+  text-align: center;
+  
+  
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-right: 20px;
+}
+
+.navbar li {
+  float: right;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20pt;
+}
+
+.navbar li a {
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.botitem{
+  text-decoration: none;
+}
+/* CSS styles for the sections */
+section {
+  margin-top: 0px; /* to push content below the fixed navbar */
+  padding:0px;
+  height: 100vh; /* adjust as needed */
+}
+
+.home {
+  /* background:radial-gradient(rgb(255, 191, 245), rgb(110, 214, 216));
+  background: radial-gradient(circle at 100%, #1f1e1f, #53d4db 50%, #ede6ec 75%, #f0e9f0 75%); */
+  background: radial-gradient(circle at 100%, #000000, #ffffff 50%, #d9f3f4 75%, #ffffff 75%);
+
+}
+
+.about {
+background: radial-gradient(rgb(249, 249, 249), rgb(207, 237, 238));
+}
+
+.projects{
+  background: radial-gradient(rgb(80, 80, 80), rgb(9, 12, 12));
+}
+/* Add more styles for other sections as needed */
+
+/* CSS styles for the text */
+.home h1 {
+  font-size: 66px;
+  margin-bottom: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.home p {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family:monospace;
+}
+
+.about h1{
+  font-size: 66px;
+  margin-bottom: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+.about p{
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-family:monospace;
+}
+
+
+.home-parent {
+  padding-top: 80px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.home-child{
+  padding: 30px;
+
+  vertical-align: middle;
+  width: 50%;
+}
+.langs p{
+  padding-top: 70px;
+  font-size: 25px;
+  line-height:30pt;
+}
+
+.about-parent{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.about-para{
+
+  margin-top: 50px;
+  padding: 20px;
+  vertical-align: middle;
+}
+.about-pic{
+  margin-top: 70px;
+  padding: 20px;
+  vertical-align: middle;
+  width: 90%;
+}
+
+.projects-parent{
+  width: 90%;
+  text-align: middle;
+  margin-top:60px;
+  
+  color: white;
+  font-size: 36px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+
+}
+
+.projects{
+  color: white;
+}
+.boxes{
+  display: flex;
+}
+.front{
+  width: 200px;
+  height: 400px;
+  background-color:gray;
+  margin: 30px;
+}
+.project-pic{
+  width: 100%;
+  object-fit: cover;
+}
+
+/* CSS styles for the circular image */
+.project-button{
+  width: 120px;
+  height: 45px;
+  object-fit:contain;
+
+}
+
+.about-button{
+  width: 100px;
+  height: 45px;
+  object-fit:contain;
+}
+
+.home-button{
+  width: 70px;
+  height: 48px;
+  object-fit:contain;
+  border-bottom: ridge;
+
+}
+
+.name-logo{
+  width: 300px;
+  height: 70px;
+  object-fit:cover;
+  float: left;
+}
+
+.soccer-img{
+  
+  width: 75%;
+  height: 75%;
+  border-radius: 00%;
+  object-fit:contain;
+
+}
+.circle-img {
+  vertical-align: middle;
+  width: 75%;
+  height: 75%;
+  border-radius: 0%;
+  object-fit:contain;
+}
+
+.links p{
+  font-size: 20px;
+}
+/* Reset default styles for the body and heading elements */
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a background color and center align the text in the header */
+  header {
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Style the navigation links */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  /* Style the sections */
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: start;
+  }
+  
+  /* section:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  
+  section:nth-child(even) {
+    background-color: #ccc;
+  } */
+  
+  /* Style the headings in the sections */
+  section h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Apply a blur effect as the user scrolls down */
+  main {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    filter: blur(0);
+    transition: filter 0.5s ease-in-out;
+  }
+  
+  main.blur {
+    filter: blur(5px);
+  }
+  
+  
