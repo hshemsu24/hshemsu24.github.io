@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Self-Similar</title>
+    <script src="recursive-shapes.js" defer></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+  </head>
+  <body>
+    <h1>Apollonian Gasket Parody</h1>
+    
+    <p>To produce my image, I employed a technique of generating four circles inside a larger circle, all tangent to each other. The inspiration for this approach came from the Apollonian Gasket. By utilizing recursion and matrix transformations, I was able to successfully create the four smaller circles within the larger one.</p>
+
+
+    <svg id="recursive-shapes" width="600" height="600" viewBox="0 0 150 150" >
+      <defs id="shape-defs">
+	<!--<rect id="square-basic" width="100" height="100" x="0" y="0" stroke="black" stroke-width="0.5%"/>-->
+  <circle id="circle-basic" cx= "75" cy= "0" r= "50" stroke="white" stroke-width="0.5%" />
+      </defs>
+      <!--<rect x="0" y="0" width="100" height="100" stroke="black" stroke-width="1%" fill="white"/>-->
+      <circle cx= "75" cy= "75" r= "50" stroke="white" stroke-width="0.50%" />
+      <!-- make the origin in the lower left corner -->
+      <g id="shape-group" transform="matrix(1, 0, 0, -1, 0, 75)"></g>	     
+    </svg>
+  </body>
+</html>

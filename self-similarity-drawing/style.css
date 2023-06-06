@@ -1,0 +1,41 @@
+svg {
+    margin: auto;
+    display: block;
+    background: radial-gradient(rgb(118, 213, 232) 50%, rgb(225, 92, 194));
+}
+
+h1{
+    text-align: center;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 300%;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+html{
+    background: radial-gradient(rgb(236, 241, 242) 50%, rgb(3, 3, 1));
+
+}
+
+#dropdown{
+margin: auto;
+display: block;
+text-align: center;
+color: black;
+width: 600px;
+height: 20px;
+background-color: white;
+
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 100%;
+}
+
+p{
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    font-family: Tahoma, sans-serif;
+    margin-bottom: 20px;
+
+}
