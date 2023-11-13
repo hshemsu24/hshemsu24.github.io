@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(251, 236, 201, 0.4); /* slightly transparent off-white */
+  background-color: rgba(251, 236, 201, 0); /* slightly transparent off-white */
   z-index: 1;
   text-align: center;
   
@@ -32,6 +32,7 @@
   text-decoration: none;
   color: black;
   font-weight: bold;
+  text-shadow: 0px 0px 6px white;
 }
 
 /* TODO: add some cool transitions to these or just floating around type beat */
@@ -310,6 +311,7 @@ background: radial-gradient(rgb(249, 249, 249), rgb(207, 237, 238));
   height: 70px;
   object-fit:cover;
   float: left;
+  filter: drop-shadow(1px 1px 7px  #ffffff);
 }
 
 .soccer-img{
